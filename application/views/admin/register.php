@@ -2,7 +2,7 @@
 	<h1 class=" pt-2">
 		<i class="fas fa-user-plus"></i> Tambah Pengguna
 	</h1>
-	<hr class="one" style="height: 5px;width: 30vh;border-radius: 20px;background: linear-gradient(to right, #2D2A70,#ed6b23);">
+	<hr class="one" style="height: 5px;width: 30vh;border-radius: 20px;background: linear-gradient(to right, #003e69,#ed6b23);">
 </div>
 <?= $this->session->flashdata('message'); ?><br>
 <div class="container-fluid">

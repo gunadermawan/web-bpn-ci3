@@ -76,12 +76,8 @@ class User extends CI_Controller
     if ($this->form_validation->run() == false) {
       $data['title'] = 'Data Asset';
       $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata['email']])->row_array();
-      $data['keterangan'] = ['BAIK - INBOX', 'BAIK - UNBOX', 'RUSAK - INBOX', 'RUSAK - UNBOX', 'BELUM DICEK'];
-      $data['kategori'] = [
-        'LEMARI 1.A (DEVICE)', 'LEMARI 1.B (DEVICE)', 'LEMARI 1.C (BARANG RUSAK)',
-        'LEMARI 2.A (SPARE PARTS)', 'LEMARI 2.B (TOOLS)', 'LEMARI 2.C (POWER SUPPLY)', 'LEMARI 3.A (RANDOM)',
-        'LEMARI 3.B (KABEL DAN BREKET)', 'LEMARI 3.C (KABEL JARINGAN)'
-      ];
+      $data['keterangan'] = ['ISLAM', 'KATOLIK', 'KRISTEN', 'HINDHU', 'BUDHA', 'Lainya'];
+      $data['kategori'] = ['Pengajuan surat akta tanah'];
       $this->load->view('templates/header', $data);
       $this->load->view('templates/sidebar', $data);
       $this->load->view('templates/topbar', $data);
@@ -145,9 +141,7 @@ class User extends CI_Controller
     $data['asset'] = $this->Model_asset->getId($id);
     $data['keterangan'] = ['ISLAM', 'KATOLIK', 'HINDHUX', 'BUDHA', 'LAINYA'];
     $data['kategori'] = [
-      'LEMARI 1.A (DEVICE)', 'LEMARI 1.B (DEVICE)', 'LEMARI 1.C (BARANG RUSAK)',
-      'LEMARI 2.A (SPARE PARTS)', 'LEMARI 2.B (TOOLS)', 'LEMARI 2.C (POWER SUPPLY)', 'LEMARI 3.A (RANDOM)',
-      'LEMARI 3.B (KABEL DAN BREKET)', 'LEMARI 3.C (KABEL JARINGAN)'
+      'Pengajuan surat akta tanah'
     ];
     // validasi inputan
     $this->form_validation->set_rules('name', 'Name', 'required|trim');
