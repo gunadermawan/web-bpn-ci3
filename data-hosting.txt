@@ -1,0 +1,7 @@
+username => 	epiz_28068234
+pass      =>  7NGQ1oHSIewThK
+
+db_name => epiz_28068234_arsipasset
+db_username => epiz_28068234
+db_pass     => 7NGQ1oHSIewThK
+db_host     => sql207.epizy.com
