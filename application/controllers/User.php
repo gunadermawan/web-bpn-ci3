@@ -187,6 +187,21 @@ class User extends CI_Controller
     $this->dompdf->render();
     $this->dompdf->stream("laporan-asset-data.pdf", array('Attachment' => 0));
   }
+  public function cetak($id)
+  {
+    $this->load->library('dompdf_gen');
+    $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata['email']])->row_array();
+    $data['asset'] = $this->Model_asset->getId($id);
+    $this->load->view('user/cetak', $data);
+    $paper_size = 'A4';
+    $orientation = 'landscape';
+    $html = $this->output->get_output();
+    $this->dompdf->set_paper($paper_size, $orientation);
+    // convert pdf
+    $this->dompdf->load_html($html);
+    $this->dompdf->render();
+    $this->dompdf->stream("laporan-asset-data.pdf", array('Attachment' => 0));
+  }
   public function print_excel()
   {
     $data['asset'] = $this->Model_asset->tampil_data('tb_asset');
