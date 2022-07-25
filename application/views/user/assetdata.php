@@ -1,7 +1,7 @@
 <div class="col-12 text-center mb-10">
 	<h1 class=" pt-2">
 		<i class="fas fa-database"></i>
-		Data Asset Penduduk
+		Data Yuridis
 	</h1>
 	<hr class="one" style="height: 5px;width: 40vh;border-radius: 20px;background: linear-gradient(to right, #003e69,#ffff);"><br>
 </div>
@@ -25,7 +25,6 @@
 </div>
 <div class="container-fluid md-6 sm-12">
 	<a href="<?= base_url('user/tambahdata'); ?>"><button class="btn btn-sm mb-3" style="background-color:#003e69; color:#ffff; border-radius:20px; width:120px;"><i class="fas fa-plus fa-sm"></i> Tambah Data</button></a>
-	<a href="<?= base_url('user/print'); ?>"><button class="btn btn-sm mb-3" style="background-color:#ed6b23; color: #ffff;border-radius:20px; width:120px;"><i class="fas fa-print fa-sm"></i> Cetak Data</button></a>
 	<a href="<?= base_url('user/print_pdf'); ?>"><button class="btn btn-sm mb-3" style="background-color:#ed6b23; color: #ffff;border-radius:20px; width:120px;"><i class="fas fa-file fa-sm"></i> Cetak PDF </button></a>
 	<a href="<?= base_url('user/print_excel'); ?>"><button class="btn btn-sm mb-3" style="background-color:#ed6b23; color: #ffff;border-radius:20px; width:120px;"><i class="fas fa-file fa-file-excel"></i> Cetak Excel </button></a>
 	<div class="table-responsive">

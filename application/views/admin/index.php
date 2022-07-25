@@ -16,7 +16,7 @@
 		</script>
 		<p>Selamat datang di aplikasi Sistem Informasi Manajemen Penduduk</p>
 		<hr>
-		<p class="mb-0">Dibuat untuk memudahkan pengelolaan data penduduk di kantor BPN Kendal</p>
+		<p class="mb-0">Dibuat untuk memudahkan pengelolaan data yuridis di kantor BPN Batang</p>
 	</div>
 	<h1 class="h3 mb-4 text-gray-800">Beranda Aplikasi</h1>
 	<!-- Page Heading -->
@@ -26,7 +26,7 @@
 			<div class="card bg-primary text-white">
 				<div class="card-body">
 					<div class="card-title">
-						<h4> <i class="fas fa-database"></i> <?= $total_rows; ?> Data asset tersedia.</h4>
+						<h4> <i class="fas fa-database"></i> <?= $total_rows; ?> Data yuridis tersedia.</h4>
 					</div>
 					Data asset yang tersedia merupakan kalkulasi dan akumulasi di dalam database.
 				</div>
