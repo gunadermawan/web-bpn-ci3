@@ -14,33 +14,33 @@
 		<div class="form-row">
 			<div class="form-group col-md-6">
 				<label for=""> <i class="fas fa-table"></i> NAMA </label>
-				<input type="text" name="name" class="form-control" value="<?= $asset['nama_asset']; ?>" placeholder="Nama Barang">
+				<input type="text" name="name" class="form-control" value="<?= $asset['nama_asset']; ?>" placeholder="Nama Pemohon">
 				<?= form_error('nama', '<small class="text-danger pl-3">', '</small>'); ?>
 			</div>
 			<div class="form-group col-md-6">
 				<label for="name"> <i class="fas fa-brush"></i> NIK </label>
 				<!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-				<input type="text" id="summernote" name="model" class="form-control" cols="30" rows="10" value="<?= $asset['model_asset']; ?>" placeholder="Model Barang">
+				<input type="text" id="summernote" name="model" class="form-control" cols="30" rows="10" value="<?= $asset['model_asset']; ?>" placeholder="NIK Pemohon">
 				<?= form_error('model', '<small class="text-danger pl-3">', '</small>'); ?>
 			</div>
 		</div>
 		<div class="form-row">
 			<div class="form-group col-md-6">
 				<label for=""> <i class="fas fa-trademark"></i> PEKERJAAN </label>
-				<input type="text" name="merk" class="form-control" value="<?= $asset['merk_asset']; ?>" placeholder="Merk Barang">
+				<input type="text" name="merk" class="form-control" value="<?= $asset['merk_asset']; ?>" placeholder="Pekerjaan pemohon">
 				<?= form_error('merk', '<small class="text-danger pl-3">', '</small>'); ?>
 			</div>
 			<div class="form-group col-md-6">
 				<label for="name"> <i class="fas fa-barcode"></i> TTL</label>
 				<!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-				<input type="text" id="summernote" name="sn" class="form-control" cols="30" rows="10" value="<?= $asset['serial_asset']; ?>" placeholder="Serial Number">
+				<input type="text" id="summernote" name="sn" class="form-control" cols="30" rows="10" value="<?= $asset['serial_asset']; ?>" placeholder="TTL pemohon">
 				<?= form_error('sn', '<small class="text-danger pl-3">', '</small>'); ?>
 			</div>
 		</div>
 		<div class="form-row">
 			<div class="form-group col-md-6">
 				<label for=""> <i class="far fa-registered"></i> USIA</label>
-				<input type="text" name="inventaris" class="form-control" value="<?= $asset['inventaris_asset']; ?>" placeholder="No Inventaris">
+				<input type="text" name="inventaris" class="form-control" value="<?= $asset['inventaris_asset']; ?>" placeholder="Usia Pemohon">
 				<?= form_error('inventaris', '<small class="text-danger pl-3">', '</small>'); ?>
 			</div>
 			<div class="form-group col-md-6">
@@ -62,7 +62,7 @@
 		<div class="form-row">
 			<div class="form-group col-md-6">
 				<label for=""> <i class="fas fa-calculator"></i> ALAMAT </label>
-				<input type="text" name="jml" class="form-control" value="<?= $asset['jml_asset']; ?>" placeholder="Jumlah Barang">
+				<input type="text" name="jml" class="form-control" value="<?= $asset['jml_asset']; ?>" placeholder="Alamat">
 				<?= form_error('jml', '<small class="text-danger pl-3">', '</small>'); ?>
 			</div>
 			<div class="form-group col-md-6">

@@ -41,9 +41,9 @@
 					<th>AGAMA</th>
 					<th>ALAMAT</th>
 					<th>TGL INPUT</th>
-					<th>TEMPAT</th>
+					<th>KATEGORI</th>
 					<th>KTP</th>
-					<th colspan="2">AKSI</th>
+					<th colspan="3">AKSI</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -72,6 +72,7 @@
 						<td><img src="<?php echo base_url() . '/uploads/dataasset/' . $row['gambar_asset'] ?>" height="150px" alt="" class="rounded"></td>
 						<td><a href="<?= base_url(); ?>user/hapus/<?= $row['id_asset']; ?>" class="btn btn-danger btn-sm" name="tombol-hapus" onclick="return confirm('Hapus Data ?');"><i class="fa fa-trash"></i></a></td>
 						<td><a href="<?= base_url(); ?>user/ubah/<?= $row['id_asset']; ?>" class="btn btn-info btn-sm float-right"><i class="fa fa-edit"></i></a></td>
+						<td><a href="<?= base_url(); ?>user/cetak/<?= $row['id_asset']; ?>" class="btn btn-success btn-sm float-right"><i class="fa fa-print"></i></a></td>
 					</tr>
 				<?php endforeach; ?>
 			</tbody>

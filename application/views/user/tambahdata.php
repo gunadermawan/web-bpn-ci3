@@ -13,25 +13,25 @@
 		<div class="form-row">
 			<div class="form-group col-md-6">
 				<label for=""> <i class="fas fa-table"></i> NAMA </label>
-				<input type="text" name="name" class="form-control" value="<?= set_value('name'); ?>" placeholder="Nama Pemohon" autofocus autocomplete="off">
+				<input type="text" name="name" class="form-control" value="<?= set_value('name'); ?>" placeholder="Nama" autofocus autocomplete="off">
 				<?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
 			</div>
 			<div class="form-group col-md-6">
 				<label for="name"> <i class="fas fa-brush"></i> NIK </label>
 				<!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-				<input type="text" id="summernote" name="model" class="form-control" cols="30" rows="10" value="<?= set_value('model'); ?>" placeholder="NIK pemohon">
+				<input type="text" id="summernote" name="model" class="form-control" cols="30" rows="10" value="<?= set_value('model'); ?>" placeholder="NIK">
 				<?= form_error('model', '<small class="text-danger pl-3">', '</small>'); ?>
 			</div>
 		</div>
 		<div class="form-row">
 			<div class="form-group col-md-6">
 				<label for=""> <i class="fas fa-trademark"></i> PEKERJAAN </label>
-				<input type="text" name="merk" class="form-control" value="<?= set_value('merk'); ?>" placeholder="Pekerjaan pemohon">
+				<input type="text" name="merk" class="form-control" value="<?= set_value('merk'); ?>" placeholder="Pekerjaan ">
 				<?= form_error('merk', '<small class="text-danger pl-3">', '</small>'); ?>
 			</div>
 			<div class="form-group col-md-6">
 				<label for="name"> <i class="fas fa-barcode"></i> TTL</label>
-				<input type="text" id="summernote" name="sn" class="form-control" cols="30" rows="10" value="<?= set_value('sn'); ?>" placeholder="Serial Number">
+				<input type="text" id="summernote" name="sn" class="form-control" cols="30" rows="10" value="<?= set_value('sn'); ?>" placeholder="Tempat tanggal lahir">
 				<?= form_error('sn', '<small class="text-danger pl-3">', '</small>'); ?>
 			</div>
 		</div>
@@ -55,7 +55,7 @@
 		<div class="form-row">
 			<div class="form-group col-md-6">
 				<label for=""> <i class="fas fa-calculator"></i> ALAMAT </label>
-				<input type="text" name="jml" class="form-control" value="<?= set_value('jml'); ?>" placeholder="Masukan alamat pemohon">
+				<input type="text" name="jml" class="form-control" value="<?= set_value('jml'); ?>" placeholder="Masukan alamat ">
 				<?= form_error('jml', '<small class="text-danger pl-3">', '</small>'); ?>
 			</div>
 			<div class="form-group col-md-6">
