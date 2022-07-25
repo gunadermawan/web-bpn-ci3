@@ -29,13 +29,13 @@
 					<th>NO</th>
 					<th>NAMA</th>
 					<th>NIK</th>
-					<th>AGAMA</th>
+					<th>PEKERJAAN</th>
 					<th>TTL</th>
 					<th>USIA</th>
-					<th>PEKERJAAN</th>
+					<th>AGAMA</th>
 					<th>ALAMAT</th>
 					<th>TGL INPUT</th>
-					<th>TEMPAT</th>
+					<th>KATEGORI</th>
 					<th>KTP</th>
 			</thead>
 			<tbody>
