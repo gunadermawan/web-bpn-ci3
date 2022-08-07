@@ -87,6 +87,17 @@ class Admin extends CI_Controller
       }
     }
   }
+  public function leader()
+  {
+    $data['register'] = $this->Model_admin->tampil_data()->result();
+    $data['title'] = 'Kepala Desa';
+    $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata['email']])->row_array();
+    $this->load->view('templates/header', $data);
+    $this->load->view('templates/sidebar', $data);
+    $this->load->view('templates/topbar', $data);
+    $this->load->view('admin/leader', $data);
+    $this->load->view('templates/footer');
+  }
   public function delete($id)
   {
     $this->Model_admin->hapusData($id);
