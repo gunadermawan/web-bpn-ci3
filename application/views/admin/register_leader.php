@@ -2,11 +2,11 @@
 	<h1 class=" pt-2">
 		<i class="fas fa-user-plus"></i> Tambah Kepala Desa
 	</h1>
-	<hr class="one" style="height: 5px;width: 30vh;border-radius: 20px;background: linear-gradient(to right, #003e69,#ed6b23);">
+	<hr class="one" style="height: 5px;width: 30vh;border-radius: 20px;background: linear-gradient(to right, #003e69,#ffff);">
 </div>
 <?= $this->session->flashdata('message'); ?><br>
 <div class="container-fluid">
-	<form class="user" method="post" action="<?= base_url('admin/register'); ?>">
+	<form class="user" method="post" action="<?= base_url('admin/register_leader'); ?>">
 		<input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
 		<div class="form-row">
 			<div class="form-group col-md-6">

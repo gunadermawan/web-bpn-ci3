@@ -90,8 +90,8 @@ class Admin extends CI_Controller
 
   public function leader()
   {
-    $data['register'] = $this->Model_admin->tampil_data()->result();
-    $data['title'] = 'Kepala Desa';
+    $data['register_leader'] = $this->Model_admin->tampil_data_leader()->result();
+    $data['title'] = 'kepala desa';
     $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata['email']])->row_array();
     $this->load->view('templates/header', $data);
     $this->load->view('templates/sidebar', $data);
@@ -121,14 +121,12 @@ class Admin extends CI_Controller
       $data = [
         'name' => htmlspecialchars($this->input->post('name', true)),
         'email' => htmlspecialchars($this->input->post('email', true)),
-        'image' => 'default.png',
         // time() nanti tinggal di panggil leat syntax php buat nampilin waktu
-        'date_created' => time()
       ];
       // insert db
-      if ($this->db->insert('user', $data)) {
+      if ($this->db->insert('leader', $data)) {
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Pendaftaran berhasil!</div>');
-        redirect('admin/user');
+        redirect('admin/leader');
       } else {
         $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Pendaftaran Gagal!</div>');
         redirect('admin/register_leader');
