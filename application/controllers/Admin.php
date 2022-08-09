@@ -87,6 +87,7 @@ class Admin extends CI_Controller
       }
     }
   }
+
   public function leader()
   {
     $data['register'] = $this->Model_admin->tampil_data()->result();
@@ -98,6 +99,43 @@ class Admin extends CI_Controller
     $this->load->view('admin/leader', $data);
     $this->load->view('templates/footer');
   }
+
+  public function register_leader()
+  {
+    // name (name di form input),Name(nama lain dari name di form input),required(form hrs diisi),trim(gaboleh ada spasi yang masuk ke db)
+    // is_unique[tabel.filed yang mau dicek udh ada datanya apa belom]
+    $this->form_validation->set_rules('name', 'Name', 'required|trim');
+    $this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email|is_unique[user.email]', [
+      'is_unique' => 'this email has already registered!'
+    ]);
+    $data['register'] = $this->Model_admin->tampil_data()->result();
+    if ($this->form_validation->run() == false) {
+      $data['title'] = 'kepala desa';
+      $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata['email']])->row_array();
+      $this->load->view('templates/header', $data);
+      $this->load->view('templates/sidebar', $data);
+      $this->load->view('templates/topbar', $data);
+      $this->load->view('admin/register_leader', $data);
+      $this->load->view('templates/footer');
+    } else {
+      $data = [
+        'name' => htmlspecialchars($this->input->post('name', true)),
+        'email' => htmlspecialchars($this->input->post('email', true)),
+        'image' => 'default.png',
+        // time() nanti tinggal di panggil leat syntax php buat nampilin waktu
+        'date_created' => time()
+      ];
+      // insert db
+      if ($this->db->insert('user', $data)) {
+        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Pendaftaran berhasil!</div>');
+        redirect('admin/user');
+      } else {
+        $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Pendaftaran Gagal!</div>');
+        redirect('admin/register_leader');
+      }
+    }
+  }
+
   public function delete($id)
   {
     $this->Model_admin->hapusData($id);

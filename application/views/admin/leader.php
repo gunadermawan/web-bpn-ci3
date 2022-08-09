@@ -6,7 +6,7 @@
     <hr class="one" style="height: 5px;width: 30vh;border-radius: 20px;background: linear-gradient(to right, #003e69,#ffff);">
 </div>
 <div class="container-fluid">
-    <a href="<?= base_url('admin/register'); ?>"><button class="btn btn-sm mb-3" style="background-color:#003e69; color:#ffff; border-radius:20px; width:150px;"><i class="fas fa-plus fa-sm"></i> Tambah data</button></a>
+    <a href="<?= base_url('admin/register_leader'); ?>"><button class="btn btn-sm mb-3" style="background-color:#003e69; color:#ffff; border-radius:20px; width:150px;"><i class="fas fa-plus fa-sm"></i> Tambah data</button></a>
     <?= $this->session->flashdata('message'); ?><br>
     <div class="table-responsive">
         <table class="table table-hover table-bordered">
